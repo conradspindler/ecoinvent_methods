@@ -25,8 +25,18 @@ In the original ReCiPe data, Caesium has a wrong formula (Ce instead of Cs), whi
 
 **Files in the [3.12/methods_mapped_corrected](3.12/methods_mapped_corrected) are updated accordingly.**
 
+Spodumene (LiAl(SiO3)2 has a Lithium content of 0.0376. This value can be used as a conversion factor when applying the CF of Lithium to Spodumene in the following methods:
+- CML v4.8 2016
+- Ecological Scarcity 2021
+- EPS 2020d
+- ReCiPe 2016.
+
+In the first three methods, Spodumene is not yet characterized, in ReCiPe 2016 it was wrongly characterized with the CF for Lithium (and a conversion factor of 1). Files were not updated for this mistake.
+
 ## Note for previous versions
 See LCIA Issues section at the bottom of [release pages](https://support.ecoinvent.org/ecoinvent-version-3.11) in our knowledge base.
+
+The Spodumene issue described above for v3.12 existed in previous versions as well.
 
 ## Note for EF methods (including EN 15804)
 The mappings to EF methods consider the [GLAD mapping](https://github.com/UNEP-Economy-Division/GLAD-ElementaryFlowResources/blob/master/Mapping/Output/Mapped_files/ecoinventEFv3.7-ILCD-EFv3.0.xlsx). While v3.9.1 implementations started from there, v3.10 (and onwards) implementations start not from the full list of elementary flows, but only from the list of characterized flows (the “lciamethods_CF” sheet of the [official Excel files](https://eplca.jrc.ec.europa.eu/permalink/EF3_1/EF-LCIAMethod_CF(EF-v3.1).xlsx)). This ensures that what is mapped also is characterized, but it also means that mappings can be different than in the GLAD mapping as the best matching flow might not be available anymore.
@@ -34,7 +44,7 @@ The mappings to EF methods consider the [GLAD mapping](https://github.com/UNEP-E
 For EN15804 in versions 3.11+, impact categories and indicators as in the EF methods were rearranged with new method and impact category names to better align with the standard and help users find what they are looking for. For the files available in the [v3.12 folder](https://github.com/ecoinvent/lcia/tree/master/3.12/methods_mapped) this means that "EN15804+A2 - Core impact categories and indicators_mapped_3.12.csv" and "EN15804+A2 - Additional impact categories and indicators_mapped_3.12.csv" are based on "EF v3.0 EN15804_mapped_3.12.csv" and "EF v3.1 EN15804_mapped_3.12.csv". Because of the rearrangement, method elementary flow ids and mapping status information are only available in the latter files.
 
 ## Metadata JSON file
-The ```metadata.json``` file available for each version follows the [tabular-data-package](https://dataprotocols.org/tabular-data-package/) standard.
+The ```metadata.json``` file available for each version follows the [tabular-data-package](https://specs.frictionlessdata.io/tabular-data-package/) standard.
 ## Author and contact
 This repository and the files in it were created by the ecoinvent Association. Feel free to reach out to sonderegger@ecoinvent.org.
 ## License
